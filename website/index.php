@@ -8,39 +8,51 @@
 <html>
 
 	<? write_header($date, $title, $this_page) ?>
-	<body onload="slider.init('sliderl');slider.init('sliderl2');slider.init('sliderr');warning.init('warning')">
+	<body  color="black" onload="slider.init('sliderl');slider.init('sliderl2');slider.init('sliderr');warning.init('warning')">
 	  <? require("common_files/themes.php"); ?>
 		<center>
-			<table class='frame'  width=842 border=0 cellpadding=0 cellspacing=0 align="center">
+			<table  width=80% border=0 cellpadding=0 cellspacing=0 align="center" color="black">
+			
+				
 				<tr>
-					<td align=center colspan=3>
+					<td align=right colspan=3>
 						<? write_title_cal1($date, $title, $this_page, $indexnum); ?>
 					</td>
 				</tr>
+				
+
+
 				<tr>
-					<td valign=top align=center width=82>
+					
+					<td valign=top align=left width=100>
 						<? write_left_accordion($date,-1); ?>
+
 					</td>
-					<td bgcolor=#FFFFFF valign=top width=680>
-    <? if ($region == '') 
-	{
-	  write_index_body_slider($date, $indexnum,"fd");
-	} 
-       else 
-	{
-	  write_index_body_slider($date, $indexnum,"ar",$region);
-        }
-    ?>
+					<td bgcolor=#383838   align=right width=200>
+					    <? if ($region == '') 
+						{
+						  write_index_body_slider($date, $indexnum,"fd");
+						} 
+					       else 
+						{
+						  write_index_body_slider($date, $indexnum,"ar",$region);
+					        }
+					    ?>
 					</td>
-					<td valign=top align=center width=82>
-						<? write_right_accordion($date); ?>
-					</td>
+					
+				
+
 				</tr>
+				
+
+
 				<tr>
-					<td align=center colspan=3>
+					<td align=center colspan=4>
 						<? write_bottom_clean(); ?>
 					</td>
 				</tr>
+
+		
 			</table>
 			<p>
  			<? write_new_ar_table($date); ?>

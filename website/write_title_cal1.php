@@ -51,12 +51,13 @@
 		
 		//Make a table for the rounded corner bg which the other table will be in the center cell.
 		print("<table width=100% height=100% cellpadding=0 cellspacing=0 border=0>\n");
+		print("<a href=index.php border=0><img width = 100% src='common_files/new_sm_logo_5.png' border=0></a>");
 		print("   <tr>\n");
 		print("       <td width=22 class='leftup' valign=top align=left>\n");
 		print("   </td>\n");
 		print("   <td align=center>\n");
 		// Print title first
-		print("<a href=index.php border=0><img src='common_files/smtitlesmall.png' border=0></a>");
+		
 		if (($date == $current_date) && ($this_page == "index.php")){
 			sm_message();
 		}
@@ -70,11 +71,7 @@
 		$next_week=date("Ymd",strtotime("+7 day", strtotime($date)));
 		$next_rot=date("Ymd",strtotime("+27 day", strtotime($date)));
 
-
-		// The following switches between the old and new flare probability page.
-		// 
-
-		$next_page = $this_page;
+    	$next_page = $this_page;
 		if (isset($_SERVER['HTTP_REFERER'])) { $previous = parse_url($_SERVER['HTTP_REFERER'], PHP_URL_PATH); }
 
 		if ($this_page == 'forecast.php' && strtotime($date) <= strtotime("20150830")){
@@ -87,8 +84,8 @@
 		if ($this_page == 'forecast_no_fps.php' && strtotime($date) >= strtotime("20150829") && $previous=='/forecast_no_fps.php')
 				$this_page = 'forecast.php';
 
-
-
+		// The following switches between the old and new flare probability page.
+		// 
 		
 		$human_readable_date = date("Ymd", strtotime($date));		
 		//	Open the table up		
@@ -100,7 +97,7 @@
 		//print("			$title\n");
 		//		print("		</font></td>\n	");
 		//		print("	</tr>                                             \n");
-		print("	<tr>                                             \n");
+	/*	print("	<tr>                                             \n");
 		print(" <td align=\"left\">");
 		print("		<form name=\"calendar\">\n");
 		print("		<!-- calendar attaches to existing form element -->\n");
@@ -127,7 +124,9 @@
 		$date_str = date("j F Y",strtotime($date));
 		$current_date_str = date("j F Y",strtotime($current_date));
 //		$datecolor = (strtotime($date) > strtotime($current_date))?"red":"white";
-		print(" <td align=\"center\"> 	<font size=3 color=\"$datecolor\"><b><a class=mail3 href =\"./index.php?date=$date\">$date_str</a></b></font>  </td>\n");
+
+
+		print(" <td align=\"center\"> 	<font size=4 color=\"$datecolor\"><a class=mail3 href =\"./index.php?date=$date\">$date_str</a></font>  </td>\n");
 		print(" <td align=right>\n");
 		print("		<form name=\"ARSearch\" id=\"ar_search\">");
 		print("		<fieldset class=\"ar_search\">");
@@ -136,37 +135,40 @@
 				print("		</fieldset>");
 		print("		</form>");
 
-
+*/
+		$date_str = date("j F Y",strtotime($date));
+		$datecolor = (strtotime($date) > strtotime($current_date))?"red":"white";
+		print("		<br>");
 		print(" </td>\n");
-		print("	</tr>                                             \n");
 
+		print("	</tr>                                             \n");
 		print("	<tr>                                             \n");
-		print("		<td valign=middle align=left><font size=2 color=#FFFFFF><b>\n");
+		print("		<td valign=middle align=left><font size=3 color=#FFFFFF>");
 		//print("		<td bgcolor=gray valign=middle align=left><font color=#FFFFFF>\n");
-		print("			<font size=2>&lArr;</font><a class=mail3 href =\"./$this_page?date=${prev_day}${type_str}${region_str}${indexnum_str}\" title=\"-1 day\" accesskey=\",\"><i>$prev_day</i></a>\n");
-		print("			<font size=2>&lArr;</font><a class=mail3 href =\"./$this_page?date=${prev_week}${type_str}${region_str}${indexnum_str}\" title=\"-7 days\"><i>Week</i></a>\n");
-		print("			<font size=2>&lArr;</font><a class=mail3 href =\"./$this_page?date=${prev_rot}${type_str}${region_str}${indexnum_str}\" title=\"-27 days\"><i>Rotation</i></a>\n");
-		print("		</b></font></td>\n");
+		print("			<font size=2>&#9668;</font><a class=mail3 href =\"./$this_page?date=${prev_day}${type_str}${region_str}${indexnum_str}\" title=\"-1 day\" accesskey=\",\">$prev_day</a>\n");
+		print("			<font size=2>&#9668;</font><a class=mail3 href =\"./$this_page?date=${prev_week}${type_str}${region_str}${indexnum_str}\" title=\"-7 days\">Week</a>\n");
+		print("			<font size=2>&#9668;</font><a class=mail3 href =\"./$this_page?date=${prev_rot}${type_str}${region_str}${indexnum_str}\" title=\"-27 days\">Rotation</a>\n");
+		print("		</font></td>\n");
 		//print("		</td>\n");
 		print("		<td valign=\"middle\" align=\"center\">\n");
 		//print("		<td bgcolor=gray valign=middle align=center><font color=white>\n");
 //		print("			<font size=3>$human_readable_date_line</font>\n");
 //		print("		</b></font></td>\n");
 	
-		print("			<font size=2><a class=mail3 href =\"./$this_page?date=${current_date}${type_str}${region_str}${indexnum_str}\" title=\"$current_date_str\"><i><b>Today</b></i></a></font>\n");
+		print("			<font size=4 color=\"$datecolor\"<a class=mail3 href =\"./$this_page?date=${current_date}${type_str}${region_str}${indexnum_str}\" title=\"$current_date_str\">$date_str</a></font>\n");
 		print("		</td>\n");
 		
-		print("		<td  valign=middle align=right><font size=2 color=#FFFFFF><b>\n");
+		print("		<td  valign=middle align=right><font size=3 color=#FFFFFF>\n");
 		//print("		<td bgcolor=gray valign=middle align=right><font color=#FFFFFF>\n");
-		print("			<a class=mail3 href =\"./$this_page?date=${next_rot}${type_str}${region_str}${indexnum_str}\" title=\"+27 days\"><i>Rotation</i></a><font size=2>&rArr;</font>\n");
-		print("			<a class=mail3 href =\"./$this_page?date=${next_week}${type_str}${region_str}${indexnum_str}\" title=\"+7 days\"><i>Week</i></a><font size=2>&rArr;</font>\n");    
-		print("			<a class=mail3 href =\"./$next_page?date=${next_day}${type_str}${region_str}${indexnum_str}\" title=\"+1 day\" accesskey=\".\"><i>$next_day</i></a><font size=2>&rArr;</font>\n");  
-		print("		</b></font></td>\n");
+		print("			<a class=mail3 href =\"./$this_page?date=${next_rot}${type_str}${region_str}${indexnum_str}\" title=\"+27 days\">Rotation</a><font size=2> &#9658;</font>\n");
+		print("			<a class=mail3 href =\"./$this_page?date=${next_week}${type_str}${region_str}${indexnum_str}\" title=\"+7 days\">Week</a><font size=2>&#9658;</font>\n");    
+		print("			<a class=mail3 href =\"./$next_page?date=${next_day}${type_str}${region_str}${indexnum_str}\" title=\"+1 day\" accesskey=\".\">$next_day</a><font size=2>&#9658;</font>\n");  
+		print("		</font></td>\n");
 		//print("		</td>\n");
 		print("	</tr>\n");
 		print("</table>\n");
-		
+			print("		<br>");
 		//Close the rounded corner table.
-		print("</td><td  width=22 class='rightup' align=right valign=top></td></tr></table>\n");
+		print("</td><td  width=22  align=right valign=top></td></tr></table>\n\n");
 	}
 ?>  

@@ -4,9 +4,9 @@
 
 /*===================================== Tables frame ==========================*/
 table.frame {
-    background: url(../../common_files/brushed-metal.jpg) repeat;
-/*    color : dimgrey;
-    background-color:#333;*/
+   /* background: "black" repeat;*/
+    color : #000000;
+    background-color: #000000;
 }
 td.leftup {
     width:22px;
@@ -29,14 +29,16 @@ td.rightdown {
     background-repeat: no-repeat;
 }
 .tabbed_content {
-	background-color: #000000;
-	background-image:url(../../common_files/brushed-metal.jpg);
+	 color : #000000;
+    background-color: #000000;
 }
 
 .cal_box {
-	background-image: url(../brushed-metal.jpg);
+	 color : #000000;
+    background-color: #000000;
 }
 
 .ar_box {
-	background-image: url(../brushed-metal.jpg);
+	 color : #000000;
+    background-color: #000000;
 }

@@ -12,7 +12,7 @@
 
 .tabs .moving_bg {
 	padding: 0px;
-	background-color:#FFFFFF;
+	background-color:#000000;
 	-moz-border-radius-topright: 5% 50%;
 	border-top-right-radius: 5% 50%;
 	-moz-border-radius-topleft: 5% 50%;
@@ -34,7 +34,7 @@
 	float: left;
 	padding: 0px;
 	width: 170px;
-	color: #ffFFff;
+	color: #FFFFFF;
 /*	background-image:url(../../brushed-metal.jpg);*/
 	text-align: center;
 	z-index: 80;
@@ -44,7 +44,7 @@
 
 .tabbed_content .slide_content {
 	overflow: hidden;
-	background-color: #FFFFFF;
+	background-color: #000000;
 	padding: 5px 0px 0px 0px;
 	position: relative;
 	width: 680px;
@@ -63,12 +63,12 @@
 }
 
 .tabslider ul a {
-	color: #ffffff;
+	color: #000000;
 	text-decoration: none;
 }
 
 .tabslider ul a:hover {
-	color: #aaaaaa;
+	color: #000000;
 }
 
 .tabslider ul li {
