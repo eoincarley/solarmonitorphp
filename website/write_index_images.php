@@ -88,16 +88,16 @@ function write_index_images($date,$indexnum,$table_div='table')
 
 		if ($table_div == 'table')
 		  {
-		    print("<table>\n");
+		    print("<table cellpadding=3> \n");
 		    for ($i=0;$i<count($index_types);$i++)
 		      {
 			if ($i == 0)
 			  print("	<tr>\n");
 			elseif (($i % 3) == 0)
 			  print("	</tr>\n	<tr>\n");
-		    
-			print("		<td align=center valign=center>\n");
-			print("			<small><i>" . $times[$i] . "</i></small>\n");
+		   
+			print("		<td align=center valign=center >\n");
+			print("			<small><font color=#99CCFF ><i>" . $times[$i] . "</i></font></small>\n");
 			
 			if(preg_match("/bake|keyh/",$index_types[$i]))
 			  {
@@ -107,7 +107,7 @@ function write_index_images($date,$indexnum,$table_div='table')
 			  {print("			<a>\n");}
 			else
 			  {
-			    print("			<a href=\"full_disk.php?date=$date&type=" . $index_types[$i] . "&indexnum=$indexnum\">\n");
+			    print("			<font color=#FFFFF ><a href=\"full_disk.php?date=$date&type=" . $index_types[$i] . "&indexnum=$indexnum\"></font>\n");
 			  }
 			print("				" . $links[$i] . "\n");
 			print("			</a>\n");
@@ -115,8 +115,9 @@ function write_index_images($date,$indexnum,$table_div='table')
 			
 			if ($i == (count($index_types)-1))
 			  print("	</tr>\n");
-			
+				
 		      }
+		       
 		    print("</table>\n");
 		  }
 		elseif ($table_div == 'div')

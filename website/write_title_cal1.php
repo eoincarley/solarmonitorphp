@@ -97,7 +97,7 @@
 		//print("			$title\n");
 		//		print("		</font></td>\n	");
 		//		print("	</tr>                                             \n");
-	/*	print("	<tr>                                             \n");
+		print("	<tr>                                             \n");
 		print(" <td align=\"left\">");
 		print("		<form name=\"calendar\">\n");
 		print("		<!-- calendar attaches to existing form element -->\n");
@@ -123,19 +123,20 @@
 
 		$date_str = date("j F Y",strtotime($date));
 		$current_date_str = date("j F Y",strtotime($current_date));
-//		$datecolor = (strtotime($date) > strtotime($current_date))?"red":"white";
+		$datecolor = (strtotime($date) > strtotime($current_date))?"red":"white";
 
-
-		print(" <td align=\"center\"> 	<font size=4 color=\"$datecolor\"><a class=mail3 href =\"./index.php?date=$date\">$date_str</a></font>  </td>\n");
+		print("<td> </td>");
+		//print(" <td align=\"center\"> 	<font size=0 color=\"black\" ><a class=mail3 href =\"./index.php?date=$date\">$date_str</a></font>  </td>\n");
+		
 		print(" <td align=right>\n");
 		print("		<form name=\"ARSearch\" id=\"ar_search\">");
 		print("		<fieldset class=\"ar_search\">");
 		print("			<input name=\"region\" type=\"text\" class=\"ar_box\" maxlength=10 value='NOAA Search'/>");
 		print("			<button class=\"ar_btn\" title=\"Submit Search\">Search</button>");
-				print("		</fieldset>");
+		print("		</fieldset>");
 		print("		</form>");
 
-*/
+
 		$date_str = date("j F Y",strtotime($date));
 		$datecolor = (strtotime($date) > strtotime($current_date))?"red":"white";
 		print("		<br>");

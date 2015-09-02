@@ -24,11 +24,11 @@
 
 				<tr>
 					
-					<td valign=top align=left width=100>
+					<td valign=top align=left width=100&>
 						<? write_left_accordion($date,-1); ?>
 
 					</td>
-					<td bgcolor=#383838   align=right width=200>
+					<td bgcolor=#383838   align=center width=100%>
 					    <? if ($region == '') 
 						{
 						  write_index_body_slider($date, $indexnum,"fd");
@@ -39,7 +39,10 @@
 					        }
 					    ?>
 					</td>
-					
+					<td valign=top align=left width=100%>
+						<? write_right_accordion($date,-1); ?>
+
+					</td>
 				
 
 				</tr>
