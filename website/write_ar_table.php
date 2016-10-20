@@ -167,11 +167,12 @@ if ($interval < 180)
 		$file = "${arm_data_path}data/" . $dirdate . "/meta/arm_ar_summary_" . $date . ".txt";
 
 			print("<div class=noaat>\n");		
-			print("<table class='frame' rules=rows width=700 align=center cellpadding=0 cellspacing=0 frame=hsides>\n");
+			print("<table class='frame' rules=rows width=700 align=center cellpadding=1 cellspacing=0 frame=hsides>\n");
 			print("	  <tr align=center class=noaatit>\n");
 			print("         <td colspan=7> Today's/<font color=grey>Yesterday's</font> NOAA Active Regions </td>\n");
 			print("   </tr>\n");
 			print("   <tr align=center class=noaacolumns>\n");
+
 			print("         <td class=noaacol><i><div onmouseover=\"title='This is a unique number assigned to each new active region by NOAA.'\">NOAA Number</div></i></td>\n");
 			print("         <td class=noaacol><i><div onmouseover=\"title='The locations are given in heliographic (latitude and longitude) and heliocentric (arcseconds from Sun centre).'\">Latest <br> Position</a></div></td>\n");
 			print("         <td class=noaacol><i><div onmouseover=\"title='The Hale class describes the magnetic complexity of an active region'\">Hale <br> Class</div></i></td>\n");

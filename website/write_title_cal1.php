@@ -51,7 +51,7 @@
 		
 		//Make a table for the rounded corner bg which the other table will be in the center cell.
 		print("<table width=100% height=100% cellpadding=0 cellspacing=0 border=0>\n");
-		print("<a href=index.php border=0><img width=100% src='common_files/new_sm_logo_7.png'  border=0></a>");
+		print("<a href=index.php border=0><img width=100% src='common_files/new_sm_logo_8.png'  border=0></a>");
 		print("   <tr>\n");
 		print("       <td width=22 class='leftup' valign=top align=left>\n");
 		print("   </td>\n");
@@ -170,6 +170,6 @@
 		print("</table>\n");
 			print("		<br>");
 		//Close the rounded corner table.
-		print("</td><td  width=22  align=right valign=top></td></tr></table>\n\n");
+		print("</td><td  width=22  class=rightup align=right valign=top></td></tr></table>\n\n");
 	}
 ?>  

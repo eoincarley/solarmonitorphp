@@ -1,4 +1,4 @@
-<? 
+<?php 
 	/*
 	Function:
 		write_footer
@@ -21,60 +21,61 @@
 	
 	function write_footer($update_date)
 	{
-		print("<a href=\"http://www.tcd.ie/\"><img src=\"./common_files/tcd_crest.png\" align=right border=0 width=53></a>\n");
-		print("<a href=\"http://www.esa.eu/\"><img src=\"./common_files/images/logos/esa_small.jpg\" align=right border=0 width=78></a>\n");
-		print("<a href=\"http://www.nasa.gov/goddard/\"><img src=\"./common_files/nasalogo.png\" align=right border=0></a>\n");
-		print("<a href=\"http://cordis.europa.eu/fp7/\"><img src=\"./common_files/FP7_Capacities_logo.jpg\" align=right border=0 width=85></a>\n");
-		print("<a href=\"http://www.helio-vo.eu/\"><img src=\"./common_files/helio_logo_small.png\" align=right border=0 width=110></a>\n");
-		print("<address><font size=\"-1\">\n");
-//		print("	<b>Web Curators:</b> Paul Higgins (TCD), Peter Gallagher (TCD), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shaun Bloomfield (TCD), James McAteer (TCD) <br>\n"); //- <a class=mail2 href=\"mailto:info@solarmonitor.org\">info@solarmonitor.org</a><br>\n");
-		print(" <i><b>Developed by:</b></i> <a class=mail2 href=credits.php>TCD SolarMonitor.org team</a><br>\n");
-		print("	<b>Contact:</b> <a class=mail2 href=\"mailto:info@solarmonitor.org\">info@solarmonitor.org</a><br><br>\n");
-//		print("	<b>Responsible NASA official:</b> Joseph B. Gurman<br>\n");
-//		print(" <a class=mail2 href=\"http://beauty.nascom.nasa.gov/nasa_warnings.html\">NASA security and privacy protection statement</a><br><br>\n");
-		print("	These pages are automatically updated every 30 minutes.<br>\n");
-		print("	Last updated: $update_date\n");
-		print("</font></address>\n");
 		
-		print("<LINK REL=\"alternate\" TITLE=\"SolarMonitor.org RSS\" HREF=\"http://www.solarmonitor.org/rss.php\" TYPE=\"application/rss+xml\">");
-		print("<LINK REL=\"alternate\" TITLE=\"SolarMonitor.org RSS Active Region Summary\" HREF=\"http://www.solarmonitor.org/rss2.php\" TYPE=\"application/rss+xml\">");
-		write_statcounter();
-		write_googleanalytics();
-	}
-		function write_footer_new($update_date)
-	{
-	  print("<div  id=\"footer\">\n");
-		print("<table width=815 align=center cellpadding=0 cellspacing=0 border=\"0\">\n");
+		
+		//	start the display
+		print("<table width=850 >\n");
+
 		print("	<tr>\n");
-		print("  <td align=\"left\">\n");
-		print("		<a class=info href=\"./about.php\">about</a><br>\n");
-		print("     <a class=info href=\"./help.php\">help</a><br> \n");
-		//		print("		<a class=info href=\"./contact.php\">contact</a><br>\n");
-		print("	 </td>\n");
-		print("  <td align=\"left\">\n");
-		print("     <a class=info href=\"./news.php\">news</a><br> \n");
-		//		print("     <a class=info href=\"./jobs.php\">jobs</a><br> \n");
-		print("     <a class=info href=\"./rss.php\"><img src=\"./common_files/images/rssfeed.jpg\" width=12> rss feed</a>\n");
-		print("	 </td>\n");
-		print("  <td align=\"right\">\n");
-		print("<a href=\"http://www.dias.ie//\"><img src=\"./common_files/images/logos/dias_logo.jpg\" align=right border=0 height=40></a>\n");
-		print("<a href=\"http://www.tcd.ie/\"><img src=\"./common_files/images/logos/TCD-logo-wide_small.jpg\" align=right border=0 height=40></a>\n");
-		//print("<a href=\"http://www.esa.eu/\"><img src=\"./common_files/images/logos/esa_small.jpg\" align=right border=0 height=70></a>\n");
-		//print("<a href=\"http://www.nasa.gov/goddard/\"><img src=\"./common_files/nasalogo.png\" align=right border=0 height=70></a>\n");
-		//print("<a href=\"http://cordis.europa.eu/fp7/\"><img src=\"./common_files/FP7_Capacities_logo.jpg\" align=right border=0 height=70></a>\n");
-		//print("<a href=\"http://www.helio-vo.eu/\"><img src=\"./common_files/helio_logo_small.png\" align=right border=0 height=70></a>\n");
-		print("	 </td>\n");
-		print(" </tr>\n");
-		print("</table>\n");
-//		print("	Last updated: $update_date\n");
-		print("<LINK REL=\"alternate\" TITLE=\"SolarMonitor.org RSS\" HREF=\"http://www.solarmonitor.org/rss.php\" TYPE=\"application/rss+xml\">");
-		print("<LINK REL=\"alternate\" TITLE=\"SolarMonitor.org RSS Active Region Summary\" HREF=\"http://www.solarmonitor.org/rss2.php\" TYPE=\"application/rss+xml\">");
-		write_statcounter();
-		write_googleanalytics();
-//		write_piwik();
-		print("</div>\n");
+
+		print("		<td align=\"left\"><font size=\"-1\">\n");
+
+
+		print(" &nbsp\n");
+		
+		print(" <hr size=1>\n");
+
+		// 	print("<div  id=\"footer\">\n");
+				print("<table width=100% align=\"justify\" border=\"0\">\n");
+				print("	<tr>\n");
+					print("  <td align=\"justify\"><font color=white>\n");
+						print(" <a href=\"http://www.tcd.ie/\"><img src=\"./common_files/images/logos/TCD-logo-wide-new.png\" align=left border=0 height=65></a>\n");
+						print("<a href=\"http://www.dias.ie//\"><img src=\"./common_files/images/logos/dias_logo2.jpg\" align=left border=0 height=65></a>\n");
+									
+						//print("  <td align=\"left\">\n");
+						print("		<a class=info href=\"./about.php\" color=white> &nbsp About</a><br>\n");
+						print("     <a class=info href=\"./help.php\"> &nbsp  Help</a><br> \n");
+						print("		<a class=info href=\"./contact.php\"> &nbsp Contact</a><br>\n");
+						//print("	 </td>\n");
+						//print("  <td align=\"left\">\n");
+						// print("     <a class=info href=\"./news.php\">&nbsp News</a><br> \n");
+						//		print("     <a class=info href=\"./jobs.php\">jobs</a><br> \n");
+						print("  &nbsp    <a class=info href=\"./rss.php\"><img src=\"./common_files/images/rssfeed.jpg\" width=12> rss feed</a>\n");
+						//print("	 </td>\n");
+						//print("  <td align=\"right\">\n");
+
+					print("	 </td>\n");
+
+
+				print(" </tr>\n");
+				print("</table>\n");
+
+
+
+
+		print(" <hr size=1>\n");
+
+	
+		//	print("</div>\n");
+
+		print("			</td>\n");	
+		print("			</tr>\n");
+		print("		</table>\n");
+
+
 	}
-		function write_footer_js()
+	
+	function write_footer_js()
 		{
 			print("	<script type='text/javascript' src='./common_files/js/jquery.hoverIntent.minified.js'></script>\n");
 			print("	<script type='text/javascript'>\n");
@@ -134,4 +135,5 @@
 			print("});\n");
 			print("	</script>\n");
 		}
+	
 ?>

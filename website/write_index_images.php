@@ -88,7 +88,7 @@ function write_index_images($date,$indexnum,$table_div='table')
 
 		if ($table_div == 'table')
 		  {
-		    print("<table cellpadding=3> \n");
+		    print("<table> \n");
 		    for ($i=0;$i<count($index_types);$i++)
 		      {
 			if ($i == 0)

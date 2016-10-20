@@ -54,8 +54,8 @@
 			<? write_new_ar_table($date) ; ?>
 			<? write_events($date) ; ?>
 			<p>
-			<hr size=2>
-		<? write_footer_new($time_updated) ; ?>
+			
+		<? write_footer($time_updated) ; ?>
 			<p>
 			</center>
 			<? write_footer_js() ; ?>

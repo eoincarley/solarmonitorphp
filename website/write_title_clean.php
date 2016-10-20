@@ -55,7 +55,8 @@
 		print("       </td>\n");
 		print("       <td align=center>\n");
 		// Print title first
-		print("         <a href=index.php border=0><img src='common_files/smtitlesmall.png' border=0></a>");
+		print("         <a href=index.php border=0><img width=700 src='common_files/new_sm_logo_8.png' border=0></a>");
+
 		print("       </td>\n");
 		//Close the rounded corner table.
 		print("       <td width=22 class='rightup' align=right valign=top>");

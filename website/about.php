@@ -9,7 +9,8 @@
 	<body>
 	  <? require("common_files/themes.php"); ?>
 		<center>
-			<table class='frame' width=842 border=0 cellpadding=0 cellspacing=0 align="center">
+			<table class='frame' width=842 border=0 cellpadding=0 cellspacing=0 align="center" bgcolor=#333333>
+			
 				<tr>
 					<td align="center" colspan=3>
 						<? write_title_clean($date, $title, $this_page, $indexnum); ?>
@@ -23,9 +24,9 @@
 						<table width=640>
 							<tr>
 								<td align=justify colspan=2>
-					<font size=+2><i>W</i></font>elcome  to  
-					<a class=mail2 href=index.php>SolarMonitor</a>, hosted by the <a class=mail2 href=http://www.physics.tcd.ie/astrophysics/>Solar Physics Group, Trinity College Dublin</a> and <a class=mail2 href=http://www.e-inis.ie>e-INIS, the Irish National e-Infrastructure</a>. These pages 
-					contain near-realtime and archived information on active regions and solar activity.<!--, using data from
+					<font size=+2>W</font>elcome  to  
+					<a class=mail2 href=index.php>SolarMonitor</a>, hosted by the <a class=mail2 href=http://www.physics.tcd.ie/astrophysics/>Solar Physics Group, Trinity College Dublin</a> and the <a class=mail2 href=https://www.dias.ie/>Dublin Institute for Advanced Studies (DIAS)</a>. These pages 
+					contain near-realtime and archived information on solar activity.<!--, using data from
 					the from the <a class=mail2 href="http://www.bbso.njit.edu/Research/Halpha/">Global H-alpha
 					Network</a>, the ESA/NASA's <a class=mail2 href=http://sohowww.nascom.nasa.gov> Solar and Heliospheric Observatory (SOHO)</a>, <a class=mail2 href=http://www.gong.noao.edu>GONG+</a>, and the <a class=mail2 href=http://www.sec.noaa.gov/>National Oceanic and Atmospheric Administration (NOAA)</a>.-->
 For information on our new SolarMonitor IDL Data Object (SOLMON), check out the <a class=mail2 href="objects/solmon/" target="_blank">SOLMON Tutorial</a>. Check out <a class=mail2 href=news.php>News</a> for other updates. 
@@ -39,6 +40,12 @@ in the School of Physics, Trinity College Dublin.<br>
 href="http://www.tcd.ie/Physics/Astrophysics/gallagher.php" target=_blank>Dr. Peter
 T. Gallagher</a> (PI)
 <li><a class=mail2
+href="https://www.tcd.ie/Physics/research/themes/astrophysics/members/" target=_blank>Dr. Eoin P. Carley</a> 
+<li><a class=mail2 href="http://grian.phy.tcd.ie/~bloomfield/" target=_blank>Dr. D.
+Shaun Bloomfield</a>
+<li><a class=mail2
+href="https://www.tcd.ie/Physics/research/themes/astrophysics/members/" target=_blank>Aoife E. McCloskey</a> 
+<!--<li><a class=mail2
 href="http://www.tcd.ie/Physics/Astrophysics/higgins.php" target=_blank>Paul A.
 Higgins</a>
 <li>Dr. David P&eacute;rez-Su&aacute;rez
@@ -46,9 +53,10 @@ Higgins</a>
 Shaun Bloomfield</a>
 <li><a class=mail2 href="http://hesperia.gsfc.nasa.gov/~jma/" target=_blank>Dr. R.T.
 James McAteer</a>
+-->
 </ul>
 
- <b>SolarMonitor Smart Phone Team</b>
+<b>SolarMonitor Smart Phone Team</b>
 <ul>
 <li>Iain Billett (CS Summer Intern 2011)
 <li>Simon Free (CS Summer Intern 2010)
@@ -58,10 +66,13 @@ David O'Callaghan</a> (TCD Computer Science)
 
 <b>SolarMonitor Alumni</b>
 <ul>
-<li>Aoife McCloskey (Summer Intern 2013)
+<li> Dr. David Perez-Suarez
+<li> Dr. Paul A. Higgins
+<li> Dr. R.T. James McAteer
 <li>Amy Holden (Summer Intern 2013)
 <li>Donna Rogers-Lee (Physics Summer Intern 2010)
 <li><a class=mail2 href="http://www.russellhewett.com/" target=_blank>Russell J. Hewett</a> (2004-2007)
+<li>Michael Tierney (Summer Intern 2014) 
 </ul>
 
 <b>Financial Support</b><br>
@@ -166,8 +177,8 @@ target=_blank>TJPzoom</a> by Janos Pal Toth.<br><br>
 				</tr>
 			</table>
 			<p>
-			<hr size=2>
-		<? write_footer_new($time_updated); ?>
+	
+		<? write_footer($time_updated); ?>
 			<p>
 		</center>
 	</body>

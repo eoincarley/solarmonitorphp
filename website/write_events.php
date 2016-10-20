@@ -35,9 +35,9 @@
 		include ("globals.php");
 		
 		//	start the display
-		print("<table width=780>\n");
+		print("<table width=710>\n");
 		print("	<tr>\n");
-		print("		<td align=\"left\"><font size=\"-1\">\n");
+		print("		<td align=\"justify\"><font color=#CCCCCC size=\"-1\">\n");
 		
 		//	check and see if the required data file exists.  if it doesnt, display a friendly message
 		$file = "${arm_data_path}data/" . $dirdate . "/meta/arm_na_events_" . $date . ".txt";
@@ -79,7 +79,7 @@
 		print("			</font></td>\n");
 		print("			</tr>\n");
 		print("			<tr>\n");
-		print("				<td align=\"left\"><font size=\"-1\">\n");
+		print("				<td align=\"justify\"><font color=#CCCCCC size=\"-1\">\n");
 		
 		//	if the update times file exists, print the footer of the table with the sentence from the old arm site.
 		//	otherwise, print it without times available.

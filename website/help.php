@@ -25,10 +25,10 @@
 						<table width=640>
 							<tr>
 								<td align=justify colspan=2>
-								 SolarMonitor.org provides realtime information about the solar activity.
+								 SolarMonitor.org provides realtime information on current solar activity.
 								 The most recent images of the sun are shown on the front page, together
-								 with the description of the different NOAA AR of the day and which flares
-								 has been associated to them.<br>
+								 with a description of the different NOAA Active Regions of the day and which flares
+								 has been associated with them.<br>
 								 On the right hand side there are few access to time-series data from 
 								 different instruments.<br>
 								 On the left hand side the list of the NOAA ARs detected for today, 
